@@ -28,3 +28,8 @@ updates:
       - "area/dependencies"
     schedule:
       interval: "daily"
+
+  - package-ecosystem: gomod
+    directory: /examples
+    schedule:
+      interval: daily
