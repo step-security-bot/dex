@@ -15,6 +15,11 @@ jobs:
     if: github.repository == 'dexidp/dex'
 
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Check minimum labels
         uses: mheap/github-action-required-labels@388fd6af37b34cdfe5a23b37060e763217e58b03 # v5.5
         with:
